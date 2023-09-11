@@ -1,5 +1,24 @@
 # This is a script to visualize satellite data 
 
+#install packages
+install.packages("terra")
+install.packages("devtools")
+install.packages("fields")
+install.packages("viridis")
+install.packages("ggplot2")
+
+#install imageRy package from GitHub, package to do satellite image analysis
+devtools::install_github("ducciorocchini/imageRy", force = "TRUE")
+
+#call to R that we are using installed packages ( packages in all programming languages are called library) 
+library(terra)
+library(devtools)
+library(fields)
+library(viridis)
+library(ggplot2)
+library(imageRy)
+
+
 # This is an operation
 10 + 10
 
@@ -21,3 +40,5 @@ plot(iron, diameter)
 
 #pch - symbol 
 #cex - size of points 
+
+
