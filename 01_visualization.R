@@ -42,3 +42,16 @@ plot(iron, diameter)
 #cex - size of points 
 
 
+#DAY 1 PRACTICAL
+
+im.list() - list of imageRy data
+
+#original file inside the package that we will use
+sentinel.dolomites.b2.tif   
+
+#importing data
+senblue <- im.import("sentinel.dolomites.b2.tif") #the reflectance of the blue band
+
+
+
+
