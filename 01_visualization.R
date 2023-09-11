@@ -50,8 +50,18 @@ im.list() - list of imageRy data
 sentinel.dolomites.b2.tif   
 
 #importing data
-senblue <- im.import("sentinel.dolomites.b2.tif") #the reflectance of the blue band
+b2 <- im.import("sentinel.dolomites.b2.tif") #the reflectance of the blue band
+
+b3 <- im.import("sentinel.dolomites.b3.tif") #green band
+b3 
+
+b4 <- im.import("sentinel.dolomites.b4.tif") #red band
+b4
+
+b8 <- im.import("sentinel.dolomites.b8.tif") #near infrared band
+b8
 
 
-
-
+#stack all images as a layer of a single image
+sentdolomites <- c(b2, b3, b4, b8)
+sentdolomites
