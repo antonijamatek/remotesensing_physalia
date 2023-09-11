@@ -7,4 +7,5 @@ This repisotry was built to store the scripts of the Physalia course 😄
 
 
 # Scripts description
-The first script will be based on visualization satellite imagery
++ The first script will be based on visualization satellite imagery
++ The second script will be based on classification 
