@@ -102,4 +102,10 @@ plot(b4, col=clr)
 clf <- colorRampPalette(c("dark yellow", "yellow", "light yellow")) (100) # 100 is the amount of colours in the gradient
 plot(b8, col=clf)
 
+#sentinel-2 image
+sentdo <- c(b2, b3, b4, b8)
+clall <- colorRampPalette(c("black, "dark gray", "gray")) (100) # 100 is the amount of colours in the gradient
+plot(sentdo, col=clall)
 
+#how to consider only one element 
+plot(sentdo[4])
