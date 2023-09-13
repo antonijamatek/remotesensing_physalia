@@ -69,24 +69,25 @@ sentdolomites
 #multipanel (multiframe) 
 #function par
 
+#DAY2
+
+#BANDS
+#b2- blue
+#b3- green
+#b4- red
+#b8- near infrared
+
+#multiframe
+
 par(mfrow=c(1,2))
 
-clb <- colorRampPalette(c("dark blue", "blue", "light blue")) (100) # 100 is the amount of colours in the gradient
+cl <- colorRampPalette(c("dark blue", "blue", "light blue")) (100) 
 plot(b2, col=cl)
 
-clg <- colorRampPalette(c("dark green", "green", "light green")) (100) # 100 is the amount of colours in the gradient
-plot(b3, col=clg)
+clh <- colorRampPalette(c("dark green", "green", "light green")) (100) # 100 is the amount of colours in the gradient
+plot(b3, col=clh)
 
-clr <- colorRampPalette(c("dark red", "red", "light red")) (100) # 100 is the amount of colours in the gradient
-plot(b4, col=clr)
-
-clf <- colorRampPalette(c("dark yellow", "yellow", "light yellow")) (100) # 100 is the amount of colours in the gradient
-plot(b8, col=clf)
-
-#dev.off()
-
-
-#exercise: plot all the bands
+#visualizing multiplot
 
 par(mfrow=c(2,4))
 
@@ -96,16 +97,46 @@ plot(b2, col=cl)
 clg <- colorRampPalette(c("dark green", "green", "light green")) (100) # 100 is the amount of colours in the gradient
 plot(b3, col=clg)
 
-clr <- colorRampPalette(c("dark red", "red", "light red")) (100) # 100 is the amount of colours in the gradient
+clr <- colorRampPalette(c("darkred", "red", "red")) (100) # 100 is the amount of colours in the gradient
 plot(b4, col=clr)
 
-clf <- colorRampPalette(c("dark yellow", "yellow", "light yellow")) (100) # 100 is the amount of colours in the gradient
+clf <- colorRampPalette(c("yellow", "yellow", "lightyellow")) (100) # 100 is the amount of colours in the gradient
 plot(b8, col=clf)
 
 #sentinel-2 image
 sentdo <- c(b2, b3, b4, b8)
-clall <- colorRampPalette(c("black, "dark gray", "gray")) (100) # 100 is the amount of colours in the gradient
+clall <- colorRampPalette(c("black", "darkgray","gray")) (100)
 plot(sentdo, col=clall)
 
 #how to consider only one element 
 plot(sentdo[4])
+
+#visualizing bands- blue, red, and greend bands are put into correspoinding compartments of RGB
+
+dev.off()
+
+#RGB space
+im.plotRGB.user(sentdo, 3, 2, 1) #it plots the first three layers in the image
+
+#Let move the numbers to get NIR into the first red compartment
+im.plotRGB.user(sentdo, 4,3,2)
+
+
+#multiframe with the natural colours image and false colour image
+par(mfrow=c(1,2))
+im.plotRGB.user(sentdo, 3, 2, 1)
+im.plotRGB.user(sentdo, 4, 3, 2)
+
+dev.off()
+
+im.plotRGB.user(sentdo,3, 4, 2)
+
+im.plotRGB.user(sentdo,3, 2, 4)
+
+#how much are correlated the bands to each other - function pairs()
+#what is the band carrying the highest information 
+
+pairs(sentdo)
+
+#hexbin package in R - for correlating large data sets
+
