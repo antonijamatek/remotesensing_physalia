@@ -65,3 +65,20 @@ b8
 #stack all images as a layer of a single image
 sentdolomites <- c(b2, b3, b4, b8)
 sentdolomites
+
+#multipanel (multiframe) 
+#function par
+
+par(mfrow=c(1,2))
+
+cl <- colorRampPalette(c("dark blue", "blue", "light blue")) (100) # 100 is the amount of colours in the gradient
+plot(b2, col=cl)
+
+clh <- colorRampPalette(c("dark green", "green", "light green")) (100) # 100 is the amount of colours in the gradient
+plot(b3, col=clh)
+
+
+#dev.off()
+
+
+#exercise: plot all the bands
