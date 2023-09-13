@@ -71,14 +71,35 @@ sentdolomites
 
 par(mfrow=c(1,2))
 
-cl <- colorRampPalette(c("dark blue", "blue", "light blue")) (100) # 100 is the amount of colours in the gradient
+clb <- colorRampPalette(c("dark blue", "blue", "light blue")) (100) # 100 is the amount of colours in the gradient
 plot(b2, col=cl)
 
-clh <- colorRampPalette(c("dark green", "green", "light green")) (100) # 100 is the amount of colours in the gradient
-plot(b3, col=clh)
+clg <- colorRampPalette(c("dark green", "green", "light green")) (100) # 100 is the amount of colours in the gradient
+plot(b3, col=clg)
 
+clr <- colorRampPalette(c("dark red", "red", "light red")) (100) # 100 is the amount of colours in the gradient
+plot(b4, col=clr)
+
+clf <- colorRampPalette(c("dark yellow", "yellow", "light yellow")) (100) # 100 is the amount of colours in the gradient
+plot(b8, col=clf)
 
 #dev.off()
 
 
 #exercise: plot all the bands
+
+par(mfrow=c(2,4))
+
+clb <- colorRampPalette(c("dark blue", "blue", "light blue")) (100) # 100 is the amount of colours in the gradient
+plot(b2, col=cl)
+
+clg <- colorRampPalette(c("dark green", "green", "light green")) (100) # 100 is the amount of colours in the gradient
+plot(b3, col=clg)
+
+clr <- colorRampPalette(c("dark red", "red", "light red")) (100) # 100 is the amount of colours in the gradient
+plot(b4, col=clr)
+
+clf <- colorRampPalette(c("dark yellow", "yellow", "light yellow")) (100) # 100 is the amount of colours in the gradient
+plot(b8, col=clf)
+
+
