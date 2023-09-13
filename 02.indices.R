@@ -81,3 +81,8 @@ dev.off()
 par(mfrow=c(1,2))
 plot(ndvi2006, col=cviridis)
 plot(ndvi2006, col=cviridis2)
+
+viridis <- colorRampPalette(viridis(7))(255)
+plot(ndvi2006, col=viridis)
+
+im.refresh()
