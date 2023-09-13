@@ -69,3 +69,15 @@ par(mfrow=c(1,2))
 plot(ndvi1992, col=clDVI)
 plot(ndvi2006, col=clDVI)
 
+#plotting using ggplot and viridis scale - good for all people with color sight dissabilities
+#scientifically meaningful image for everyone
+
+cviridis <- colorRampPalette(c('blue','green','yellow'))(100) # specifying a color scheme
+cviridis2 <- colorRampPalette(c("violet", "darkblue",'blue','green','yellow'))(100) # specifying a color scheme
+im.ggplot(ndvi2006, 1)
+
+dev.off()
+        
+par(mfrow=c(1,2))
+plot(ndvi2006, col=cviridis)
+plot(ndvi2006, col=cviridis2)
