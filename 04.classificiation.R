@@ -56,10 +56,36 @@ m2006c <- setValues(m2006[[1]], k2006$cluster) #assign new values to a raster im
 m2006c
 plot(m2006c)
 
-
 #classes of 2006:
 #class 1: agriculture
 #class 2: forest
+
+#final estimates 
+
+#estimate frequencies for the two images
+freq1992 <- freq(m1992c)
+freq1992 #number of pixels attained to a certain class
+
+freq2006 <- freq(m2006c)
+freq2006
+
+#calculate percentages
+m1992c
+
+tot1992 = 1500 * 1200
+perc1992 = freq1992*100/tot1992
+perc1992
+
+#1992: forest had the percentage of 83.08%, and agriculture had the percentage of 16.91%
+
+
+m2006c
+
+tot2006 = 3000 * 2400
+perc2006 = freq2006*100/tot2006
+perc2006
+
+#2006: forest=45.31%, and agriculture=54.69%
 
 
 
