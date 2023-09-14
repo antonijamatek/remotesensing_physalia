@@ -87,5 +87,24 @@ perc2006
 
 #2006: forest=45.31%, and agriculture=54.69%
 
+#building the output table 
+cover <- c("forest", "agriculture")
+perc1992 <- c(83.08, 16.91)
+perc2006 <- c(45.31, 54.69)
+
+#final table
+p <- data.frame(cover, perc1992, perc2006)
+p
+
+
+#final plot
+library(ggplot2)
+p1 <- ggplot(p, aes(x=cover, y=perc1992, color=cover)) + geom_bar(stat="identity", fill="white") 
+p2 <- ggplot(p, aes(x=cover, y=perc2006, color=cover)) + geom_bar(stat="identity", fill="white")
+
+library(patchwork)
+p1+p2
+
+
 
 
