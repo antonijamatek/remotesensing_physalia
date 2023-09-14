@@ -48,3 +48,14 @@ gdif_all = gmulti[[4]]-gmulti[[3]]-gmulti[[2]]-gmulti[[1]]
 plot(gdif_all, col=cldif)
 
 
+#RGB
+im.plotRGB.user(gmulti, 1, 3, 4)
+#red component - 2000
+#green component - 2010
+#blue component - 2015
+
+#all the parts in green will have the highest value in 2010 - 
+#the same for red and 2000, and blue and 2015)
+
+cldif=colorRampPalette(c("red", "pink", "light blue", "blue"))(100)
+
