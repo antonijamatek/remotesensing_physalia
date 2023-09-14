@@ -37,3 +37,6 @@ pcamp
 
 viridis <- colorRampPalette(viridis(7))(255)
 plot(pcamp, col=viridis)
+
+#the first PC1 has the highest resolution because the PC1 explains over 80% of varaibility,
+#while other axes represent less and less variability (images with less details)
